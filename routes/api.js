@@ -26,14 +26,14 @@ router.post('/api/workouts', ({ body }, res) => {
 
 router.put('/api/workouts/:id', (req, res) => {
   const workoutID = req.params.id
-  db.Exercise.create(req.body)
-    .then(({ _id }) => db.Workout.findOneAndUpdate({ _id: workoutID }, { $push: { exercises: _id }}, { new: true }))
-    .then(dbWorkout => {
-      res.json(dbWorkout);
-    })
-    .catch(err => {
-      res.json(err);
-    });
+  // db.Exercise.create(req.body)
+  //   .then(({ _id }) => db.Workout.findOneAndUpdate({ _id: workoutID }, { $push: { exercises: _id }}, { new: true }))
+  //   .then(dbWorkout => {
+  //     res.json(dbWorkout);
+  //   })
+  //   .catch(err => {
+  //     res.json(err);
+  //   });
 });
 
 router.get('/api/workouts/range', (req, res) => {

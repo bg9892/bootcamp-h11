@@ -10,7 +10,6 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.Promise = global.Promise;
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds245518.mlab.com:45518/heroku_sh32xzcc", 
 {
